@@ -7,17 +7,14 @@ CREATE TABLE "title_id" (
 );
 
 CREATE TABLE "employees" (
-    "emp_no" Integer   NOT NULL,
+    "emp_no" Integer PRIMARY KEY,
     "emp_title_id" VARCHAR(5)   NOT NULL,
     "birth_date" VARCHAR(10)   NOT NULL,
     "first_name" VARCHAR   NOT NULL,
     "last_name" VARCHAR   NOT NULL,
     "sex" VARCHAR(1)   NOT NULL,
-    "hire_date" VARCHAR(10)   NOT NULL,
-    CONSTRAINT "pk_employees" PRIMARY KEY (
-        "emp_no"
-     )
-);
+    "hire_date" VARCHAR(10)   NOT NULL
+     );
 
 CREATE TABLE "salaries" (
     "emp_no" Integer   NOT NULL,
@@ -45,10 +42,11 @@ CREATE TABLE "dept_emp" (
 );
 
 CREATE TABLE "dept_manager" (
-    "emp_no" Integer   NOT NULL,
     "dept_no" VARCHAR(4)   NOT NULL,
+    "emp_no" Integer   NOT NULL,
     CONSTRAINT "pk_dept_manager" PRIMARY KEY (
-        "emp_no"
+        "emp_no",
+        "dept_no"
      )
 );
 
