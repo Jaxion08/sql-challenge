@@ -1,5 +1,5 @@
 # sql-challenge
-###Module 9 Challenge
+
 ERD.png has my Entity Relationship Diagram.
 
 table_schemata.sql contains the SQL I used to create the tables.
